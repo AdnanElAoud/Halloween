@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/jj"
+         android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_menu"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:tint="@color/grey_3"
+                    app:srcCompat="@drawable/ic_menu"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <com.iambedant.text.OutlineTextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/halloween"
+                    android:gravity="center"
+
+                    app:outlineColor="#A53C1C"
+                    app:outlineWidth="0.7"
+
+                    android:text="@string/app_name"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                    android:textColor="#fbb03b"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:visibility="visible"
+                        android:id="@+id/btn_search"
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:tint="@color/grey_3"
+                         tools:ignore="VectorDrawableCompat" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+     </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@+id/jj"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ProgressBar
+            android:visibility="visible"
+            android:indeterminateTint="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            tools:ignore="MissingConstraints" />
+
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

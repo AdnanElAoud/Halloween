@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/alfa_slab_one</item>
+        <item>@font/allerta</item>
+        <item>@font/architects_daughter</item>
+        <item>@font/freckle_face</item>
+        <item>@font/knewave</item>
+        <item>@font/pacifico</item>
+        <item>@font/piedra</item>
+        <item>@font/salsa</item>
+        <item>@font/yeseva_one</item>
+    </array>
+</resources>

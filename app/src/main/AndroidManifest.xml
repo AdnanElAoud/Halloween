@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.mob.halloween">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+
+
+
+    <application
+        android:name="com.app.mob.halloween.Ads.MyApplication"
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Halloween"
+         >
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7734946040183698~1871308699"/>
+
+
+        <activity android:name=".ContactActivity"
+            android:theme="@style/ii"></activity>
+        <activity android:name=".MoreAppsActivity" />
+        <activity android:name=".StoryDetailActivity" />
+        <activity
+            android:name=".AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ii"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="PolicyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ii"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <service android:name=".Service.MyFirebaseMessaging"
+            android:enabled="true"
+            android:exported="true"
+             >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_restaurant2" />
+
+    </application>
+
+ 
+
+
+
+
+</manifest>

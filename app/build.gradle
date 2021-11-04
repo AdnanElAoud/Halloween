@@ -1,0 +1,94 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.app.mob.halloween"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 5
+        versionName "2.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath false
+            }
+        }
+    }
+
+    buildTypes {
+
+        release {
+            minifyEnabled true  // enables ProGuard
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
+}
+
+dependencies {
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0-rc02'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //Ads
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.google.android.ads.consent:consent-library:1.0.6'
+    implementation 'com.google.android.gms:play-services-ads:19.5.0'
+    //Ads
+    implementation 'com.google.android.gms:play-services-ads:19.6.0'
+    def lifecycle_version = "2.2.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    implementation 'com.google.android.ads.consent:consent-library:1.0.6'
+
+    //FIREBASE
+    implementation 'com.google.firebase:firebase-database:19.5.0'
+    implementation 'com.google.firebase:firebase-storage:19.2.0'
+    implementation 'com.google.firebase:firebase-messaging:20.3.0'
+    implementation 'com.google.firebase:firebase-analytics:17.6.0'
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.github.iamBedant:OutlineTextView:1.0.5'
+    implementation 'com.github.varunest:sparkbutton:1.0.6'
+    implementation 'com.github.medyo:android-about-page:1.1.1'
+
+    implementation 'com.squareup.retrofit2:converter-gson:2.+'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.+'
+    implementation 'com.google.firebase:firebase-messaging:17.+'
+    implementation 'io.paperdb:paperdb:2.6'
+
+
+ }
+apply plugin: 'com.google.gms.google-services'

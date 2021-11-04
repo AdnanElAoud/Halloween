@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        app:layout_scrollFlags="scroll|enterAlways"
+
+        android:background="@android:color/white"
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:clipToPadding="false"
+
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="false"
+        app:layout_collapseMode="parallax">
+
+        <RelativeLayout
+            android:foreground="@drawable/main_background"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+
+                android:id="@+id/img_fact"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:gravity="center"
+                android:background="#75000000"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:textStyle="bold"
+
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:foregroundGravity="center"
+                    android:id="@+id/title_fact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                     android:padding="8dp"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/relativeLayoutAds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <com.app.mob.halloween.Ads.TemplateView
+            android:visibility="gone"
+
+            android:layout_margin="10dp"
+
+             android:layout_marginTop="25dp"
+            android:id="@+id/my_template"
+            app:gnt_template_type="@layout/gnt_medium_template_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
